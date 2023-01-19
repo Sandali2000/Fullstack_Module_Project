@@ -1,0 +1,189 @@
+<app-main-nav></app-main-nav>
+<!-- full Title -->
+<div class="full-title">
+  <div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+
+
+  </div>
+</div>
+<!-- Page Content -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 mb-lg-0 mb-3">
+      <div class="card p-4">
+        <div class="img-box">
+          <img src="https://www.freepnglogos.com/uploads/visa-logo-download-png-21.png" alt="">
+        </div>
+        <div class="number">
+          <label class="fw-bold" >**** **** **** 1060</label>
+        </div>
+        <div class="d-flex align-items-center justify-content-between">
+          <small><span class="fw-bold">Expiry date:</span><span>10/16</span></small>
+          <small><span class="fw-bold">Name:</span><span>Kumar</span></small>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 mb-lg-0 mb-3">
+      <div class="card p-4">
+        <div class="img-box">
+          <img src="https://www.freepnglogos.com/uploads/mastercard-png/file-mastercard-logo-svg-wikimedia-commons-4.png"
+               alt="">
+        </div>
+        <div class="number">
+          <label class="fw-bold">**** **** **** 1060</label>
+        </div>
+        <div class="d-flex align-items-center justify-content-between">
+          <small><span class="fw-bold">Expiry date:</span><span>10/16</span></small>
+          <small><span class="fw-bold">Name:</span><span>Kumar</span></small>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 mb-lg-0 mb-3">
+      <div class="card p-4">
+        <div class="img-box">
+          <img src="https://www.freepnglogos.com/uploads/discover-png-logo/credit-cards-discover-png-logo-4.png"
+               alt="">
+        </div>
+        <div class="number">
+          <label class="fw-bold">**** **** **** 1060</label>
+        </div>
+        <div class="d-flex align-items-center justify-content-between">
+          <small><span class="fw-bold">Expiry date:</span><span>10/16</span></small>
+          <small><span class="fw-bold">Name:</span><span>Kumar</span></small>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-12 mt-4">
+      <div class="card p-3">
+        <p class="mb-0 fw-bold h4">Payment Methods</p>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="card p-3">
+        <div class="card-body border p-0">
+          <p>
+            <a class="btn btn-primary w-100 h-100 d-flex align-items-center justify-content-between"
+               data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true"
+               aria-controls="collapseExample">
+              <span class="fw-bold">Member Details</span>
+
+
+            </a>
+          </p>
+
+
+          <div class="collapse p-3 pt-0" id="collapseExample">
+            <div class="row">
+              <div class="col-8">
+
+
+           <!--middle form-->
+                <div class="container1">
+                  <div class="wrapper">
+                    <div class="outer-card">
+                      <div class="forms">
+                       <form [formGroup]="addPayment" >
+                         <div class="input-items">
+                        <span>User Name </span> <input formControlName="name" placeholder="Your Registered User Name" class="form-control"  size="19" required>
+                          <small *ngIf="addPayment.get('name').invalid&&addPayment.get('name').touched" class="text-danger"> *UserName is Required</small>
+                      </div>
+                         <div class="input-items">
+                           <span>Purpose</span> <input placeholder="Purpose of payment" formControlName="purpose" required>
+                           <small *ngIf="addPayment.get('purpose').invalid&&addPayment.get('purpose').touched" class="text-danger"> *Purpose is Required</small>
+                      </div>
+                         <div class="input-items">
+                           <div class="input-items"> <span>Email</span> <input placeholder="Enter Email Address" formControlName="email" required>
+                             <small *ngIf="addPayment.get('email').invalid&&addPayment.get('email').touched" class="text-danger"> *Email is Required</small>
+                           </div>
+                         </div>
+
+                         <div class="one-line">
+                        <div class="input-items">
+                          <span>Password</span>
+                          <input placeholder="**********" type="password" formControlName="password" required>
+                          <small *ngIf="addPayment.get('password').invalid&&addPayment.get('password').touched" class="text-danger"> *Password is Required</small>
+                        </div>
+                           <div class="input-items"> <span>   Price</span>
+                        <input placeholder="Enter Your Payment: Ex-$50.00" formControlName="price" required>
+                             <small *ngIf="addPayment.get('price').invalid&&addPayment.get('price').touched" class="text-danger"> *Price is Required </small>
+                      </div>
+                      </div>
+                         <div class="m-t-lg">
+                           <ul class="list-inline">
+                             <li>
+                               <button type="submit" class="btn btn--form" (click)="onSubmit()">Submit</button>&nbsp;
+                               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                               <button type="submit" class="btn btn--form" (click)="onClear()">Reset</button>
+                             </li>
+                           </ul>
+                         </div>
+                       </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-body border p-0">
+          <p>
+            <a class="btn btn-primary p-2 w-100 h-100 d-flex align-items-center justify-content-between"
+               data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true"
+               aria-controls="collapseExample">
+              <span class="fw-bold">Credit Card</span>
+              <span class="">
+
+
+                                </span>
+            </a>
+          </p>
+          <div class="collapse show p-3 pt-0" id="collapseExample">
+            <div class="row">
+              <div class="col-lg-5 mb-lg-0 mb-3">
+                <p class="h4 mb-0">Summary</p>
+                <p class="mb-0"><span class="fw-bold">Product:</span><span class="c-green">: Name of
+                                            product</span>
+                </p>
+                <p class="mb-0">
+                  <span class="fw-bold">Price:</span>
+                  <span class="c-green">:$452.90</span>
+                </p>
+                <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque
+                  nihil neque
+                  quisquam aut
+                  repellendus, dicta vero? Animi dicta cupiditate, facilis provident quibusdam ab
+                  quis,
+                  iste harum ipsum hic, nemo qui!</p>
+              </div>
+              <div class="col-lg-7">
+                <form action="" class="form">
+                  <div class="row">
+
+                    <div class="col-12">
+                      <div id="myPaypalButtons">
+
+                      </div>
+
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

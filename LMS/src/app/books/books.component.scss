@@ -1,0 +1,151 @@
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+
+}
+.name {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: initial
+}
+
+
+ul li a {
+  text-decoration-line: none;
+  height: 20rem;
+  width: 18rem;
+  border: 1px solid whitesmoke;
+  border-radius: 1rem;
+  margin: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #050525;
+
+
+}
+
+img{
+  width: 230px;
+  height: 250px;
+}
+li a:hover{
+  opacity: 0.8;
+  cursor: pointer;
+  font-size: large;
+}
+.content{
+  padding: .5rem 1rem;
+  position: relative;
+}
+.favorite{
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.2rem;
+}
+
+
+.star{
+  margin-bottom: .2rem;
+}
+.product-item-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.origins{
+  flex: 9;
+}
+
+.origins span{
+  border-radius: 2rem;
+  background-color: #d2d9ff;
+  color: #040e37;
+  font-size: .9rem;
+  margin-right: .3rem;
+  display: inline-block;
+}
+
+.clock-time {
+  font-size: .9rem;
+  flex: 2;
+  text-align: right;
+  position: relative;
+  right: 70px;
+
+}
+
+.price{
+  color: #440202;
+  margin-top: .2rem;
+}
+.full-title{
+  padding: 80px 0px;
+
+  background: url('https://www.simmons.edu/sites/default/files/styles/2160w/public/2020-10/library.jpg?itok=L9CgGyAD') no-repeat center;
+  position: relative;
+  width: 100%;
+}
+.full-title:before{
+  content: "";
+  background: rgba(0,0,0,0.5);
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.full-title h1{
+  position: relative;
+  color: #ffffff;
+}
+.full-title h1 small{
+  float: right;
+  padding: 15px 0px;
+  font-size: 22px;
+}
+
+
+
+
+//search
+div.search {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+div  input{
+  border-radius: 10rem 0 0 10rem;
+  border: none;
+  height: 3rem;
+  width: 20rem;
+  background-color: #f1f1f1;
+  padding: 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+}
+
+div button{
+  color: gray;
+  height: 3rem;
+  width: 5rem;
+  font-size: 1rem;
+  border-radius: 0 10rem 10rem 0 ;
+  border: none;
+  background-color: #040444;
+  color: white;
+  opacity: 0.8;
+  outline: none;
+}
+div button:hover{
+  opacity: 1;
+  cursor: pointer;
+}

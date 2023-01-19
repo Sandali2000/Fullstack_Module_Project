@@ -1,0 +1,94 @@
+
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-admin-nav></app-admin-nav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-admin-header (toggleSidebarForMe)="sideBarToggler()"></app-admin-header>
+
+    <div class="container-fluid page">
+      <div class="d-flex page__box p-3 mt-2">Add Book</div>
+      <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data position-absolute ">
+          <section class="get-in-touch">
+
+            <form class="contact-form row" [formGroup]="addBook"  novalidate>
+              <div class="form-field col-lg-3">
+
+                <input id="name" class="input-text js-input" type="text" formControlName="name" required>
+                <label class="label" for="name">Name</label>
+              </div>
+
+              <div class="form-field col-lg-3 ">
+                <input class="input-text js-input" type="text" formControlName="name" required>
+                <label class="label" for="name">Author Name
+                </label>
+              </div>
+              <div class="form-field col-lg-3 ">
+                <input id="language" class="input-text js-input" type="text"formControlName="language" required>
+                <label class="label" for="language">Language<small  *ngIf="language.invalid && language.touched"  class="text-danger">* Language is Required</small></label>
+              </div>
+              <div class="form-field col-lg-3">
+                <input id="pages" class="input-text js-input" type="number" formControlName="page" required>
+                <label class="label" for="pages">Pages Count<small  *ngIf="page.invalid && page.touched"  class="text-danger">* page is Required</small></label>
+              </div>
+              <div class="form-field col-lg-3 ">
+                <input id="count" class="input-text js-input" type="number" formControlName="count" required>
+                <label class="label" for="count">Book Count<small  *ngIf="count.invalid && count.touched"  class="text-danger">* Book count is Required</small></label>
+              </div>
+              <div class="form-field col-lg-3 ">
+                <input id="date" class="input-text js-input" type="date" formControlName="date" required>
+                <label class="label" for="date">Date<small  *ngIf="date.invalid && date.touched"  class="text-danger">* date is Required</small></label>
+              </div>
+              <div class="form-field col-lg-3 ">
+                <input id="price" class="input-text js-input" type="number" formControlName="price" required>
+                <label class="label" for="price">Price<small  *ngIf="price.invalid && price.touched"  class="text-danger">* price is Required</small></label>
+              </div>
+
+              <div class="form-field col-lg-3 ">
+
+                <select id="tags" name="tags" class="input-text js-input" required formControlName="tags" place>
+
+                  <option value="Novel">Novel</option>
+                  <option value="Education">Education</option>
+                  <option value="Children">Children</option>
+                  <option value="History">History</option>
+                  <option value="religions">religions</option>
+                  <option value="Other">Other</option>
+                </select>
+                <label class="label" for="tags">Tag<small  *ngIf="tags.invalid && tags.touched"  class="text-danger">* Tag is Required</small></label>
+              </div>
+              <div class="form-field col-lg-6 ">
+                <input id="contents" class="input-text js-input" type="text" formControlName="contents" required>
+                <label class="label" for="contents">Contents</label>
+              </div>
+
+              <div class="form-field col-lg-6 ">
+                <input id="image" class="input-image js-input" type="file" formControlName="imageUrl" required>
+                <label class="label" for="image">Book Image</label>
+              </div>
+              <div class="form-field col-lg-12">
+                <input id="description" class="input-text js-input" type="text"formControlName="description" required>
+                <label class="label" for="description">Description</label>
+              </div>
+              <div class="form-field col-lg-12">
+                <button type="submit"class="submit-btn"   >Sign up</button>&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="submit" class="submit-btn">Reset</button>
+
+
+
+
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+
+  </mat-drawer-content>
+</mat-drawer-container>
+
+
+
+

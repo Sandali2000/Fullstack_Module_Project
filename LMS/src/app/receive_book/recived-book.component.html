@@ -1,0 +1,110 @@
+
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-admin-nav></app-admin-nav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-admin-header (toggleSidebarForMe)="sideBarToggler()"></app-admin-header>
+
+    <div class="container-fluid page">
+      <div class="d-flex page__box p-3 mt-2">Received Book</div>
+      <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data position-absolute ">
+          <form class="form-style-9" [formGroup]="formGroup" >
+            <mat-radio-group formControlName="selection" style="margin: 10px">
+              <mat-radio-button *ngFor="let book of bookList" [value]="book" style="margin-left:30px; color: #040e37; font-weight: bold; font-size: 16px ">
+                {{book}}
+              </mat-radio-button>
+            </mat-radio-group><br>
+
+            <mat-form-field appearance="outline" style="width: 500px">
+              <mat-label>User name</mat-label>
+              <input formControlName="userName"
+                     type="text"
+                     [matAutocomplete]="auto1"
+
+                     matInput placeholder="UserName"/>
+              <mat-autocomplete #auto1="matAutocomplete">
+                <mat-option *ngFor="let option1 of filteredOption1 | async" [value]="option1">
+                  {{option1}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+            <mat-form-field appearance="outline" style="width: 500px; margin-left: 10px">
+              <mat-label>Email </mat-label>
+              <input formControlName="email"
+                     [matAutocomplete]="auto2"
+
+                     matInput type="email"
+                     placeholder="Email"/>
+              <mat-autocomplete #auto2="matAutocomplete">
+                <mat-option *ngFor="let option2 of filteredOption2 | async" [value]="option2">
+                  {{option2}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field><br>
+
+            <mat-form-field appearance="outline" style="width: 500px ">
+              <mat-label>Book Name </mat-label>
+              <input formControlName="bookName"
+                     type="text"
+                     [matAutocomplete]="auto"
+
+                     matInput
+                     placeholder="Book Name"/>
+              <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOption | async" [value]="option">
+                  {{option}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+
+
+            <mat-form-field appearance="outline" style="width: 500px; margin-left: 10px">
+              <mat-label>Author Name </mat-label>
+              <input formControlName="authorName"
+                     type="text"
+                     [matAutocomplete]="auto3"
+
+                     matInput  placeholder="Book Name"/>
+              <mat-autocomplete #auto3="matAutocomplete">
+                <mat-option *ngFor="let option3 of filteredOption3 | async" [value]="option3">
+                  {{option3}}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field><br>
+
+
+            <mat-form-field appearance="outline" style="width: 500px">
+              <mat-label>Received Date</mat-label>
+              <input formControlName="resDate" matInput [matDatepicker]="picker1" >
+              <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+              <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" style="width: 500px; margin-left: 10px">
+              <mat-label>Return Date</mat-label>
+              <input formControlName="retDate" matInput [matDatepicker]="picker2"
+              >
+              <mat-datepicker-toggle matIconSuffix [for]="picker2">
+              </mat-datepicker-toggle>
+              <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field><br>
+            <mat-form-field appearance="outline" style="width: 800px ">
+              <mat-label>Comment </mat-label>
+              <textarea formControlName="comment" matInput></textarea>
+            </mat-form-field><br>\
+
+            <button mat-raised-button color="warn" (click)="clear()" style="margin-right:60px;width: 150px; height: 40px ">Clear</button>
+            <button mat-raised-button color="primary" (click)="addData()" style="margin-right:60px;width: 150px; height: 40px ">Save</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </mat-drawer-content>
+</mat-drawer-container>
+
+
+

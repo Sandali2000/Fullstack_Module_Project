@@ -1,0 +1,89 @@
+.banner.owl-carousel.owl-next{
+  width: 110px;
+
+}
+
+ h1{
+  font-weight: 600;
+  font-size: 24px;
+}
+.services-bar .card{
+  box-shadow: 3px 5px 15px rgba(0,0,0, .15);
+  border: none;
+}
+.services-bar .card h4.card-header{
+  background-color: rgba(5, 5, 37, 0.76);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+}
+.services-bar .card .card-footer{
+  background-color: #040444;
+}
+
+
+.review {
+  margin-bottom: 30px;
+}
+
+.review .review-slider {
+  position: relative;
+}
+
+.review .review-slider-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background: #ffffff;
+}
+
+.review .review-img {
+  width: 100%;
+  max-width: 200px;
+  overflow: hidden;
+}
+
+.review .review-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.review .review-text {
+  padding: 15px;
+  width: 100%;
+  max-width: calc(100% - 200px);
+}
+
+.review .review-text h2 {
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.review .review-text h3 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.review .review-text p {
+  margin: 0;
+}
+
+.review .review-text .ratting {
+  margin-bottom: 5px;
+}
+
+.review .review-text .ratting i {
+  color: #91051b;
+  font-size: 14px;
+}
+
+.review .slick-slider:hover .slick-prev {
+  left: 30px;
+}
+
+.review .slick-slider:hover .slick-next {
+  right: 30px;
+}

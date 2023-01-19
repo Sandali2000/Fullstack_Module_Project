@@ -1,0 +1,56 @@
+<app-main-nav></app-main-nav>
+<!-- full Title -->
+<div class="full-title">
+  <div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">Search Books
+      <small>Subheading</small>
+    </h1>
+  </div>
+</div>
+<!-- Page Content -->
+
+
+<div class="search">
+  <input type="text" placeholder="Search Book"
+         [(ngModel)]="searchText" >
+  <button >Search </button>
+
+</div>
+<div class="container">
+
+<ul>
+
+  <li *ngFor="let book of books|filter:searchText| paginate:{itemsPerPage:12, currentPage:page, totalItems:totalLength}">
+    <a routerLink="/bookDetail/{{book._id}}">
+      <img src="{{book.imageUrl}}" alt="">
+      <div class="content">
+        <div class="name">
+          {{book.name}}
+        </div>
+        <div class="name1">
+          {{book.authorName}}
+        </div>
+        <samp class="favorite {{book.page}}"></samp>
+
+        <div class="product-item-footer">
+          <div class="price">$
+            {{book.price}}
+          </div>
+          <div class="clock-time">
+            <span></span>
+            {{book.language}}
+          </div>
+
+        </div>
+
+      </div>
+
+    </a> </li>
+</ul>
+<pagination-controls class="text-center" (pageChange)="page = $event" ></pagination-controls>
+</div>
+<app-footer></app-footer>
+
+
+

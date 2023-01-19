@@ -1,0 +1,61 @@
+
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-admin-nav></app-admin-nav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-admin-header (toggleSidebarForMe)="sideBarToggler()"></app-admin-header>
+
+    <div class="container-fluid page">
+      <div class="d-flex page__box p-3 mt-2">Book List</div>
+      <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data position-absolute ">
+
+          <div class="container">
+            <div class="row">
+              <div class="search">
+                <input type="text" placeholder="Search Library Member "
+                       [(ngModel)]="searchText" >
+
+
+              </div>
+
+              <div class="header">Book List</div>
+
+              <table >
+                <tr>
+                  <th>Image</th>
+                  <th>Book Name</th>
+                  <th>Author Name</th>
+                  <th>Price</th>
+                  <th>Tag</th>
+                  <th>Language</th>
+                  <th>Edit Delete</th>
+                </tr>
+                <tr *ngFor="let book of books |filter:searchText | paginate:{itemsPerPage:4, currentPage:page, totalItems:totalLength}">
+                  <td><img src="{{book.imageUrl}}" alt=""></td>
+                  <td >{{book.name}}</td>
+                  <td >{{book.authorName}}</td>
+                  <td >${{book.price}}</td>
+                  <td >{{book.tags}}</td>
+                  <td >{{book.language}}</td>
+                  <td >
+
+                    <button (click)="delStudent(book)" class="btn btn-danger">DELETE</button> </td>
+
+                </tr>
+
+
+              </table>
+
+              <br>
+              <pagination-controls class="text-center" (pageChange)="page = $event" ></pagination-controls>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </mat-drawer-content>
+</mat-drawer-container>

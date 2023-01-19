@@ -1,0 +1,70 @@
+
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-admin-nav></app-admin-nav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-admin-header (toggleSidebarForMe)="sideBarToggler()"></app-admin-header>
+
+    <div class="container-fluid page">
+      <div class="d-flex page__box p-3 mt-2">Received Book List</div>
+      <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data position-absolute ">
+
+          <div class="container">
+            <div class="row">
+              <div class="search">
+                <input type="text" placeholder="Search Library Member "
+                       [(ngModel)]="searchText" >
+
+
+              </div>
+
+
+
+              <div class="header">Received Book List</div>
+
+              <table >
+                <tr>
+
+                  <th>User Name</th>
+                  <th>Email</th>
+                  <th>Book Name</th>
+                  <th>Author Name</th>
+                  <th>Received Date</th>
+                  <th>Return Date</th>
+                  <th>Edit </th>
+                </tr>
+                <tr *ngFor="let student of books |filter:searchText | paginate:{itemsPerPage:8, currentPage:page, totalItems:totalLength}">
+
+                  <td >{{student.userName}}</td>
+                  <td >{{student.email}}</td>
+                  <td >{{student.bookName}}</td>
+                  <td >{{student.authorName}}</td>
+                  <td >{{student.resDate}}</td>
+                  <td >{{student.retDate}}</td>
+                  <td><a routerLink="/editReturnBook/{{student._id}}"  class="btn btn-success">
+                    Return
+                  </a>|
+                    <button (click)="delete(student)" class="btn btn-danger">DELETE</button> </td>
+
+
+                  <td >
+
+                </tr>
+
+
+              </table>
+              <br>
+              <pagination-controls class="text-center" (pageChange)="page = $event" ></pagination-controls>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </mat-drawer-content>
+</mat-drawer-container>
+
+

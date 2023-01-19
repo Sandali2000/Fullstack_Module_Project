@@ -1,0 +1,38 @@
+
+
+      <div class="container">
+        <div class="row">
+
+
+
+          <div class="header">Staff Members</div>
+
+          <table >
+            <tr>
+              <th>Image</th>
+              <th>Full Name</th>
+              <th>Email</th>
+              <th>Position</th>
+              <th>Contact Number</th>
+
+            </tr>
+            <tr *ngFor="let admins of admins ">
+              <td><img src="../../assets/{{admins.image}}" alt=""></td>
+              <td >{{admins.username}}</td>
+              <td >{{admins.email}}</td>
+              <td  style="color: maroon; font-weight: bold ">{{admins.position}}</td>
+              <td >{{admins.phoneNumber}}</td>
+
+
+
+
+            </tr>
+
+
+          </table>
+
+
+        </div>
+      </div>
+
+

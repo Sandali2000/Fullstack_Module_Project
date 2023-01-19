@@ -1,0 +1,55 @@
+
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-admin-nav></app-admin-nav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-admin-header (toggleSidebarForMe)="sideBarToggler()"></app-admin-header>
+
+
+<app-count></app-count>
+    <div class="row">
+
+      <div class="col-md-6">
+        <app-admin-list></app-admin-list>
+      </div>
+      <div class="col-md-6">
+        <div class="brack">
+
+        </div>
+        <div class="column">
+          <div class="container-fluid page" >
+            <div class="d-flex page__box p-3 mt-2"><div style="font-size: x-large; color: maroon ; align-items: center" >Current Books List in Our Library</div></div>
+
+            <div style="width: 500px; height: 200px" >
+              <canvas id="myChart" style="position: center; background-attachment: fixed" >
+
+              </canvas>
+
+
+            </div>
+
+          </div>
+
+          <div >
+        </div>
+
+
+        </div>
+
+
+        </div>
+
+      </div>
+
+
+
+
+  </mat-drawer-content>
+
+</mat-drawer-container>
+
+
+
+
+

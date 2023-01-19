@@ -1,0 +1,48 @@
+<app-main-nav></app-main-nav>
+<div *ngIf="books" class="container">
+  <img [src]="books.imageUrl" [alt]="books.name">
+  <div class="details">
+    <div class="header">
+    <span class="name">
+      {{books.name}}
+    </span>
+
+      <span class="favorite ">
+        ♥
+    </span>
+
+    </div>
+    <div class="star">
+
+    </div>
+
+    <div class="author">
+
+    </div>
+    <div class="origins">
+    <span>
+      {{books.language}}
+    </span>
+    </div>
+    <div class="tag">
+      {{books.description}}
+    </div>
+    <div class="clock-time">
+       <span class="name">
+      Author Name-:{{books.authorName}}
+    </span>
+
+    <span>
+      <strong>{{books.date}}  </strong>
+    </span>
+    </div>
+
+    <div class="price">
+      <span>{{books.price| currency}}</span>
+
+    </div>
+
+
+  </div>
+</div>
+<app-footer></app-footer>

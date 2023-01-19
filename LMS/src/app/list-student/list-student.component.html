@@ -1,0 +1,66 @@
+
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-admin-nav></app-admin-nav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-admin-header (toggleSidebarForMe)="sideBarToggler()"></app-admin-header>
+
+    <div class="container-fluid page">
+      <div class="d-flex page__box p-3 mt-2">Student List</div>
+      <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data position-absolute ">
+
+          <div class="container">
+            <div class="row">
+              <div class="search">
+                <input type="text" placeholder="Search Library Member "
+                       [(ngModel)]="searchText" >
+
+
+              </div>
+
+
+
+              <div class="header">Users</div>
+
+              <table >
+                <tr>
+                  <th>Image</th>
+                  <th>Full Name</th>
+                  <th>User Name</th>
+                  <th>Email</th>
+                  <th>Contact Number</th>
+                  <th>Address</th>
+                  <th>Edit Delete</th>
+                </tr>
+                <tr *ngFor="let student of students |filter:searchText | paginate:{itemsPerPage:4, currentPage:page, totalItems:totalLength}">
+                  <td><img src="../../assets/{{student.image}}" alt=""></td>
+                  <td >{{student.fullName}}</td>
+                  <td >{{student.name}}</td>
+                  <td >{{student.email}}</td>
+                  <td >{{student.contactNo}}</td>
+                  <td>{{student.address}}</td>
+
+                  <td >
+                    <a href ="/editStudent/{{student._id}}" class="btn btn-success">
+                      EDIT
+                    </a>|
+                    <button (click)="delStudent(student)" class="btn btn-danger">DELETE</button> </td>
+
+                </tr>
+
+
+              </table>
+              <br>
+              <pagination-controls class="text-center" (pageChange)="page = $event" ></pagination-controls>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </mat-drawer-content>
+</mat-drawer-container>
+

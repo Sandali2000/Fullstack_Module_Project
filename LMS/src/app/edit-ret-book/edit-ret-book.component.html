@@ -1,0 +1,77 @@
+
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-admin-nav></app-admin-nav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-admin-header (toggleSidebarForMe)="sideBarToggler()"></app-admin-header>
+
+    <div class="container-fluid page">
+      <div class="d-flex page__box p-3 mt-2">Receive Book</div>
+
+      <div class="page__content shadow p-3 position-relative">
+
+
+        <form class="form-style-9" [formGroup]="formGroup" >
+          <mat-radio-group formControlName="selection" style="margin: 10px">
+            <mat-radio-button *ngFor="let book of bookList" [value]="book" style="margin-left:30px; color: #040e37; font-weight: bold; font-size: 16px ">
+              {{book}}
+            </mat-radio-button>
+          </mat-radio-group><br>
+
+          <mat-form-field appearance="outline" style="width: 500px">
+            <mat-label>User name</mat-label>
+            <input formControlName="userName" readonly matInput placeholder="UserName"/>
+          </mat-form-field>
+          <mat-form-field appearance="outline" style="width: 500px; margin-left: 10px">
+            <mat-label>Email </mat-label>
+            <input formControlName="email" readonly matInput type="email" placeholder="Email"/>
+          </mat-form-field><br>
+
+          <mat-form-field appearance="outline" style="width: 500px ">
+            <mat-label>Book Name </mat-label>
+            <input formControlName="bookName" readonly matInput placeholder="Book Name"/>
+          </mat-form-field>
+          <mat-form-field appearance="outline" style="width: 500px; margin-left: 10px">
+            <mat-label>Author Name </mat-label>
+            <input formControlName="authorName" readonly matInput  placeholder="Book Name"/>
+          </mat-form-field><br>
+
+
+          <mat-form-field appearance="outline" style="width: 500px">
+            <mat-label>Received Date</mat-label>
+            <input formControlName="resDate" readonly matInput [matDatepicker]="picker1" >
+
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 500px; margin-left: 10px">
+            <mat-label>Return Date</mat-label>
+            <input formControlName="retDate" readonly matInput [matDatepicker]="picker2"
+            >
+
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field><br>
+          <mat-form-field appearance="outline" style="width: 800px ">
+            <mat-label>Comment </mat-label>
+            <textarea formControlName="comment" matInput></textarea>
+          </mat-form-field><br>
+
+          <button mat-raised-button color="primary" (click)="returnBook()" style="margin-right:60px;width: 150px; height: 40px ">Return Book</button>
+
+        </form>
+
+        <div class="page__content-data position-absolute ">
+          <section class="get-in-touch">
+
+
+
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+
+  </mat-drawer-content>
+</mat-drawer-container>

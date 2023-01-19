@@ -1,0 +1,126 @@
+.page {
+  color: white;
+  padding: 0 1rem;
+  background: #f1f5f9;
+  &__box {
+    min-height: 120px;
+    background: #1e293b;
+    margin: 0 -1rem;
+    font-size: 36px;
+  }
+  &__content {
+    min-height: calc(100vh - 178px);
+    border-radius: 10px;
+    margin-top: -2rem;
+    background: white;
+    color: black;
+
+    &-data {
+      top: 50%;
+      left: 35%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+.row{
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 1200px;
+  left: 200px;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x)/ -2);
+  margin-left: calc(var(--bs-gutter-x)/ -2);
+}
+
+
+
+.contact-form .form-field {
+  position: relative;
+  margin: 32px 0;
+
+}
+.contact-form .input-text {
+  display: block;
+  width: 100%;
+  height: 27px;
+  border-width: 0 0 2px 0;
+  border-color: #5543ca;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.contact-form .input-image {
+  display: block;
+  width: 100%;
+  height: 27px;
+  border-width: 0 0 2px 0;
+  border-color: #5543ca;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.contact-form .input-text:focus {
+  outline: none;
+}
+.contact-form .input-text:focus + .label,
+.contact-form .input-text.not-empty + .label {
+  -webkit-transform: translateY(-24px);
+  transform: translateY(-24px);
+}
+.contact-form .label {
+  position: absolute;
+  left: 20px;
+  bottom: 11px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #5543ca;
+  cursor: text;
+  transition: -webkit-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out,
+  -webkit-transform .2s ease-in-out;
+}
+.contact-form .submit-btn {
+  display: inline-block;
+  background-color: #000;
+  background-image: linear-gradient(125deg, #2898a7, #064497);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 2rem;
+  width:200px;
+  cursor: pointer;
+}
+
+
+.next{
+  color: white;
+}
+.form-control.ng-touched.ng-invalid {
+  border:1px solid red;
+}
+.form-control.ng-touched.ng-valid {
+  border:1px solid green;
+}
+:host{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+mat-drawer{
+  width: 260px;
+  background:  #0f172a;
+}
+mat-drawer-container{
+  height: 100%;
+}
+

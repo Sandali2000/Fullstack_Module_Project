@@ -1,0 +1,33 @@
+.mat-icon {
+  -webkit-user-select: none;
+  user-select: none;
+  background-repeat: no-repeat;
+  display: inline-block;
+  fill: currentColor;
+  height: 20px;
+  width: 24px;
+  overflow: hidden;
+}
+.full-title{
+  padding: 100px 0px;
+  background: url('http://stjosephrockdale.org/wp-content/uploads/2020/04/Contact-us.jpg') no-repeat center;
+  position: relative;
+}
+.full-title:before{
+  content: "";
+  background: rgba(0,0,0,0.5);
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.full-title h1{
+  position: relative;
+  color: #ffffff;
+}
+.full-title h1 small{
+  float: right;
+  padding: 15px 0px;
+  font-size: 14px;
+}

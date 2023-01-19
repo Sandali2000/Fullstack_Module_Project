@@ -1,0 +1,52 @@
+
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+
+<body>
+<div class="main">
+  <input type="checkbox" id="chk" aria-hidden="true">
+    <div>
+      <img src="https://msl.mt.gov/_images/MSL-GSShort.png" style="height: 70px;margin-left: 60px; margin-top: 20px">
+    </div>
+  <div class="signup">
+    <form [formGroup]="user" >
+      <label for="chk" aria-hidden="true">Sign up</label>
+      <input type="text" name="username" placeholder="User name" formControlName="username" required="">
+      <input type="email" name="email" placeholder="Email" formControlName="email" required="">
+      <input type="email" name="studentId" placeholder="Student Id" formControlName="studentId"  required="">
+      <input type="password" name="password" placeholder="Password" formControlName="password" required="">
+      <button class="submit" (click)="register()">Sign up</button>
+    </form>
+  </div>
+
+  <div class="login">
+    <form (submit)="onLoginSubmit()">
+      <label for="chk" aria-hidden="true">Login</label>
+      <input type="text" class="form-control" [(ngModel)]="username" name="username" >
+      <input type="password" class="form-control" [(ngModel)]="password" name="password" >
+      <button class="submit"  >Login</button>
+
+
+      <div *ngIf="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Error!</strong> Wrong UserName OR Password
+        <button (click)="closeAlert()"  type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

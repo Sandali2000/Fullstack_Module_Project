@@ -1,0 +1,62 @@
+
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-admin-nav></app-admin-nav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-admin-header (toggleSidebarForMe)="sideBarToggler()"></app-admin-header>
+
+    <div class="container-fluid page">
+      <div class="d-flex page__box p-3 mt-2">Student List</div>
+      <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data position-absolute ">
+
+          <div class="container">
+            <div class="row">
+              <div class="search">
+                <input type="text" placeholder="Search Library Member "
+                       [(ngModel)]="searchText" >
+
+
+              </div>
+
+
+
+              <div class="header">Payment List</div>
+
+              <table >
+                <tr>
+
+                  <th>User Name</th>
+                  <th>Email</th>
+                  <th>Purpose Of The Payment</th>
+                  <th>Price</th>
+
+
+                </tr>
+                <tr *ngFor="let money of money |filter:searchText | paginate:{itemsPerPage:4, currentPage:page, totalItems:totalLength}">
+
+                  <td >{{money.name}}</td>
+                  <td >{{money.email}}</td>
+                  <td >{{money.purpose}}</td>
+                  <td >${{money.price}}</td>
+
+
+                </tr>
+
+
+              </table>
+              <br>
+              <pagination-controls class="text-center" (pageChange)="page = $event" ></pagination-controls>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </mat-drawer-content>
+</mat-drawer-container>
+
+
+

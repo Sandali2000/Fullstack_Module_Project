@@ -1,0 +1,147 @@
+<app-main-nav></app-main-nav>
+
+
+  <br>
+
+  <div class="banner">
+   <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide  ><img src="./assets/slider-1.png" style="height: 600px"></ng-template>
+    <ng-template carouselSlide  ><img src="./assets/s-1.jpg" style="height: 600px"></ng-template>
+    <ng-template carouselSlide  ><img src="./assets/service.webp" style="height: 600px"></ng-template>
+  </owl-carousel-o>
+</div>
+  <div class="container">
+  <div class="services-bar">
+    <h1 class="my-4" style="font-weight: 600">features of our library </h1>
+    <!-- Services Section -->
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header">User management module</h4>
+          <div class="card-img">
+            <img class="img-fluid" src="./assets/service.webp" alt="" />
+          </div>
+          <div class="card-body">
+            <p class="card-text">A detailed database of users with their name, ID, login and password is created. This helps in
+              keeping track of the member’s
+              library usage. Also, a multi-user environment ensures that many users can use the software without speed or access issues.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header">Smart Library</h4>
+          <div class="card-img">
+            <img class="img-fluid" src="./assets/slider-2.jpg" alt="" />
+          </div>
+          <div class="card-body">
+            <p class="card-text">At the college and university level, where 1000s of books are in the catalog, innovative technology trends can convert a campus library to a smart library that uses  Artificial Intelligence to understand student behavior patterns and recommend additional content.
+
+              The University of Chicago’s smart library has automated the process of book issuance so that the entire process takes less than 5 minutes.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header">Search function</h4>
+          <div class="card-img">
+            <img class="img-fluid" src="./assets/search.webp" alt="" />
+          </div>
+          <div class="card-body">
+            <p class="card-text">Library Management System has been intended to automate, oversee and care for the general handling of
+              even enormous scale libraries. This product is fit for overseeing Book Issues, Returns, Magazine/Newspaper Subscriptions,
+              Calculating/Managing Fine and Balances of installments due from Members, creating different Reports for Record-Keeping and
+              Review purposes, as per end client prerequisites.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <div class="review">
+    <h1 class="my-4">Student Feedback</h1>
+    <div class="container-fluid">
+      <div class="row align-items-center review-slider normal-slider">
+        <owl-carousel-o [options]="customOption">
+          <ng-template carouselSlide  ><div class="col-md-12 ">
+            <div class="review-slider-item">
+              <div class="review-img">
+                <img src="./assets/review-2.jpg" alt="Image">
+              </div>
+              <div class="review-text">
+                <h2>Brant Hickman</h2>
+                <h3>Student- Business Faculty</h3>
+                <div class="ratting">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+
+                </div>
+                <p>
+                  Keep the library open until about 8/9pm during holidays. Many people I
+                  have spoken with would like that as most are working till 5pm.
+                </p>
+              </div>
+            </div>
+          </div></ng-template>
+          <ng-template carouselSlide  > <div class="col-md-12">
+            <div class="review-slider-item">
+              <div class="review-img">
+                <img src="./assets/review-1.jpg" alt="Image">
+              </div>
+              <div class="review-text">
+                <h2>Louise Fletcher</h2>
+                <h3>Student- Computing Faculty</h3>
+                <div class="ratting">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <p>
+                  Reading is good for us! As well as recognized mental health benefits,
+                  there is a proven link between how often we read for pleasure and how well we do academically. Use libraries often
+                </p>
+              </div>
+            </div>
+          </div></ng-template>
+          <ng-template carouselSlide  ><div class="col-md-12">
+            <div class="review-slider-item">
+              <div class="review-img">
+                <img src="./assets/review-3.jpg" alt="Image">
+              </div>
+              <div class="review-text">
+                <h2>Anna Jeff</h2>
+                <h3>Lecturer-Computing Faculty</h3>
+                <div class="ratting">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+
+                </div>
+                <p>
+                  Stuck with recommended text? Fancy something a little lighter? I highly recommend this library for reading for fun in Loughborough
+                </p>
+              </div>
+            </div>
+          </div></ng-template>
+        </owl-carousel-o>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

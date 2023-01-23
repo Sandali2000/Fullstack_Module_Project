@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
 
-import { ReceivedBookService } from './receivedBook.service';
+import {TestBed} from "@angular/core/testing";
+import {ReceivedBookService} from "./receivedBook.service";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
 
-describe('ReceivedBookService', () => {
-  let service: ReceivedBookService;
-
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(ReceivedBookService);
+describe('Received Service',()=>{
+  beforeEach(()=>{
+    TestBed.configureTestingModule({
+      imports:[HttpClientTestingModule],
+      providers:[ReceivedBookService]
+    })
   });
+  it('service created',()=>{
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+  })
+})

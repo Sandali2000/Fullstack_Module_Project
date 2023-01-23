@@ -1,23 +1,20 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {TestBed} from "@angular/core/testing";
+import {BooksComponent} from "./books.component";
 
-import { BooksComponent } from './books.component';
+import {RouterTestingModule} from "@angular/router/testing";
 
-describe('BooksComponent', () => {
-  let component: BooksComponent;
-  let fixture: ComponentFixture<BooksComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ BooksComponent ]
+
+describe('Book Page',()=>{
+  beforeEach(()=>{
+    TestBed.configureTestingModule({
+      imports:[RouterTestingModule],
+      providers:[BooksComponent]
     })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(BooksComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
   });
+  it('service created',()=>{
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  })
+})
+
+

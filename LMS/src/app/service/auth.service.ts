@@ -15,10 +15,10 @@ export class AuthService {
   login(user:any) {
     return this.https.post('http://localhost:8080/users/authenticate', user);
   }
-
   register(user:any){
     return this.https.post('http://localhost:8080/users/register',user);
   }
+
 
   storeUserData(token:any, user:any){
     localStorage.setItem('id_token', token);

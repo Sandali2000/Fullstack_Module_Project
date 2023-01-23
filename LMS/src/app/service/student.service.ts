@@ -40,8 +40,6 @@ export class StudentService {
     return this.http.get('http://localhost:8080/student/count-student/')
   }
 
-  getData(){
-    return this.http.get('http://localhost:8080/student/')
 
-  }
+
 }

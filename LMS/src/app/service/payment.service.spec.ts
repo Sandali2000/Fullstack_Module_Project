@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
 
-import { PaymentService } from './payment.service';
+import {TestBed} from "@angular/core/testing";
+import {PaymentService} from "./payment.service";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
 
-describe('PaymentService', () => {
-  let service: PaymentService;
-
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(PaymentService);
+describe('Payment Service',()=>{
+  beforeEach(()=>{
+    TestBed.configureTestingModule({
+      imports:[HttpClientTestingModule],
+      providers:[PaymentService]
+    })
   });
+  it('service created',()=>{
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+  })
+})

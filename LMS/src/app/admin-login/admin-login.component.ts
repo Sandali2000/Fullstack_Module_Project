@@ -54,11 +54,12 @@ export class AdminLoginComponent implements OnInit {
     this.alert=false
   }
 
-register(){
+
+  register(){
     console.log(this.user.value);
     this.authService.register(this.user.value).subscribe((data=>{
       console.log(data);
       alert("succsess")
     }))
-}
+  }
 }
